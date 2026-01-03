@@ -10,15 +10,7 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-def data_atual():
-    local_time = t.localtime()
-    ano = local_time.tm_year
-    mes = local_time.tm_mon
-    dia = local_time.tm_mday
-    return (str(dia) + '/' + str(mes) + '/' + str(ano))
-    
-
-df = pd.read_excel(r'dataset\df_clean.xlsx')
+df = pd.read_excel(r'https://github.com/marcelomguimaraes/tech4/blob/main/dataset/df_clean.xlsx')
 
 st.set_page_config(page_title="Análise do Risco de Obesidade", page_icon="📈")
 
@@ -339,3 +331,4 @@ def acao_botao():
     
 if st.button(label='Exibir Resultado da Análise de Obesidade', icon="🔥", type='primary', width="stretch"):
     acao_botao()
+
