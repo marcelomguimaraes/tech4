@@ -206,7 +206,7 @@ paciente_predito = teste_novo_paciente.drop(['RISCO'], axis=1)
 
 def acao_botao():
     print(paciente)
-    modelo = joblib.load(r'https://github.com/marcelomguimaraes/tech4/raw/refs/heads/main/model/xgb.joblib')
+    modelo = joblib.load(r'model/xgb.joblib')
     final_pred = modelo.predict(paciente_predito)
     imc_paciente = paciente_predict_df.loc[0, 'IMC']
     faf_paciente = paciente_predict_df.loc[0, 'FAF']
@@ -334,6 +334,7 @@ def acao_botao():
     
 if st.button(label='Exibir Resultado da Análise de Obesidade', icon="🔥", type='primary', width="stretch"):
     acao_botao()
+
 
 
 
