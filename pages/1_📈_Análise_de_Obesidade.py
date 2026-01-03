@@ -10,7 +10,10 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-df = pd.read_excel(r'https://raw.githubusercontent.com/marcelomguimaraes/tech4/main/dataset/df_clean.xlsx')
+df = pd.read_csv(r'https://raw.githubusercontent.com/marcelomguimaraes/tech4/refs/heads/main/dataset/df_clean.csv', sep=";")
+
+
+#df = pd.read_excel(r'https://raw.githubusercontent.com/marcelomguimaraes/tech4/main/dataset/df_clean.xlsx')
 
 st.set_page_config(page_title="Análise do Risco de Obesidade", page_icon="📈")
 
@@ -331,5 +334,6 @@ def acao_botao():
     
 if st.button(label='Exibir Resultado da Análise de Obesidade', icon="🔥", type='primary', width="stretch"):
     acao_botao()
+
 
 
