@@ -227,7 +227,7 @@ def acao_botao():
         st.success('Ebba, o paciente apresenta BAIXO RISCO de obesidade. Os fatores que contribuem para este resultado são:')
         
         if imc < 25:
-            st.markdown(f'''<p>✅ O IMC está ótimo, com um resultado de: {imc_paciente:.1f}. Possuir um peso equilibrado é fundamental para uma boa qualidade de vida.</p>''', unsafe_allow_html=True)
+            st.markdown(f'''<p>✅ O IMC está ótimo, com um resultado de: {imc_paciente}. Possuir um peso equilibrado é fundamental para uma boa qualidade de vida.</p>''', unsafe_allow_html=True)
         
         if faf_paciente >= 2:
             st.markdown(f'''<p>✅ Pratica atividade com frequência: 3x ou mais por semana, favorecendo a manutenção de um peso coerente à altura, além de proporcionar melhor qualidade de vida.</p>''', unsafe_allow_html=True)
@@ -284,7 +284,7 @@ def acao_botao():
         if imc >= 25:
             st.markdown(
                 f'''
-                ⛔ O IMC está em uma faixa acima do limite considerado normal (até 24.9), o que indica claramente que o peso está descompassado, resgistrando um resultado de: {imc_paciente:.1f}.
+                ⛔ O IMC está em uma faixa acima do limite considerado normal (até 24.9), o que indica claramente que o peso está descompassado, resgistrando um resultado de: {imc_paciente}.
                 ''', unsafe_allow_html=True
             )
             
@@ -335,6 +335,7 @@ def acao_botao():
     
 if st.button(label='Exibir Resultado da Análise de Obesidade', icon="🔥", type='primary', width="stretch"):
     acao_botao()
+
 
 
 
